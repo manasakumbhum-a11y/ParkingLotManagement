@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    color: #222;
+}
+
+header {
+    background: #17365d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+h2 {
+    margin-bottom: 18px;
+    color: #17365d;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #176b45;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.panel h2 {
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background: #17365d;
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #28568c;
+}
+
+.slot-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.slot {
+    padding: 16px;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+}
+
+.available {
+    background: #238653;
+}
+
+.occupied {
+    background: #c44242;
+}
+
+.slot p {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+#message {
+    margin: 15px 0;
+    font-weight: bold;
+    color: #176b45;
+}
+
+#vehicleList,
+#conflictList {
+    margin-top: 15px;
+    line-height: 2;
+}
+
+footer {
+    background: #17365d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}

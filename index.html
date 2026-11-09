@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Parking Lot Management System</h1>
+        <p>Vehicle Registration and Parking Slot Management</p>
+    </header>
+
+    <main>
+
+        <h2>Parking Dashboard</h2>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>2 Wheeler Available</h3>
+                <p id="available2W">0</p>
+            </div>
+
+            <div class="card">
+                <h3>2 Wheeler Occupied</h3>
+                <p id="occupied2W">0</p>
+            </div>
+
+            <div class="card">
+                <h3>4 Wheeler Available</h3>
+                <p id="available4W">0</p>
+            </div>
+
+            <div class="card">
+                <h3>4 Wheeler Occupied</h3>
+                <p id="occupied4W">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Vehicles</h3>
+                <p id="totalVehicles">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Currently Parked</h3>
+                <p id="parkedVehicles">0</p>
+            </div>
+
+        </section>
+
+        <p id="message"></p>
+
+        <section class="forms">
+
+            <!-- Vehicle Registration -->
+            <div class="panel">
+                <h2>Register Vehicle</h2>
+
+                <form id="vehicleForm">
+
+                    <label>Vehicle Number</label>
+                    <input
+                        type="text"
+                        name="number"
+                        placeholder="Example: AP01AB1234"
+                        required
+                    >
+
+                    <label>Vehicle Category</label>
+                    <select name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="2W">2 Wheeler</option>
+                        <option value="4W">4 Wheeler</option>
+                    </select>
+
+                    <button type="submit">Register Vehicle</button>
+
+                </form>
+            </div>
+
+            <!-- Add Parking Slot -->
+            <div class="panel">
+                <h2>Add Parking Slot</h2>
+
+                <form id="slotForm">
+
+                    <label>Slot Category</label>
+                    <select name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="2W">2 Wheeler</option>
+                        <option value="4W">4 Wheeler</option>
+                    </select>
+
+                    <button type="submit">Add Slot</button>
+
+                </form>
+            </div>
+
+            <!-- Vehicle Entry -->
+            <div class="panel">
+                <h2>Vehicle Entry</h2>
+
+                <form id="entryForm">
+
+                    <label>Vehicle Number</label>
+                    <input
+                        type="text"
+                        name="number"
+                        placeholder="Enter registered vehicle number"
+                        required
+                    >
+
+                    <button type="submit">Assign Parking Slot</button>
+
+                </form>
+            </div>
+
+            <!-- Vehicle Exit -->
+            <div class="panel">
+                <h2>Vehicle Exit</h2>
+
+                <form id="exitForm">
+
+                    <label>Vehicle Number</label>
+                    <input
+                        type="text"
+                        name="number"
+                        placeholder="Enter vehicle number"
+                        required
+                    >
+
+                    <button type="submit">Release Parking Slot</button>
+
+                </form>
+            </div>
+
+        </section>
+
+        <!-- Parking Slots -->
+        <section class="panel">
+            <h2>Parking Slot Details</h2>
+
+            <button type="button" onclick="loadSlots()">
+                View Parking Slots
+            </button>
+
+            <div id="slotList" class="slot-list"></div>
+        </section>
+
+        <!-- Registered Vehicles -->
+        <section class="panel">
+            <h2>Registered Vehicles</h2>
+
+            <button type="button" onclick="loadVehicles()">
+                View Vehicles
+            </button>
+
+            <div id="vehicleList"></div>
+        </section>
+
+        <!-- Conflict Detection -->
+        <section class="panel">
+            <h2>Conflict Detection</h2>
+
+            <button type="button" onclick="checkConflicts()">
+                Check Parking Conflicts
+            </button>
+
+            <div id="conflictList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Parking Lot Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
